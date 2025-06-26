@@ -16,7 +16,6 @@ public class ToDo {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new ToDo().createUI());
     }
-
     private void createUI() {
         frame = new JFrame("To-Do App");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -51,7 +50,7 @@ public class ToDo {
         controlPanel.add(sortButton);
 
         frame.add(controlPanel, BorderLayout.SOUTH);
-
+        
         // Action Listeners
         addButton.addActionListener(e -> addTask());
         completeButton.addActionListener(e -> markAsDone());
