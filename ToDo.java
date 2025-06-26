@@ -83,7 +83,6 @@ public class ToDo {
             taskListModel.addElement(task.toString());
         }
     }
-
     private void markAsDone() {
         int index = taskList.getSelectedIndex();
         if (index >= 0) {
@@ -106,7 +105,6 @@ public class ToDo {
     private void showMessage(String msg) {
         JOptionPane.showMessageDialog(frame, msg);
     }
-
     class Task {
         private String title;
         private Date dueDate;
