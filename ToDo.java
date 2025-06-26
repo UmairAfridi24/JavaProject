@@ -57,10 +57,8 @@ public class ToDo {
         completeButton.addActionListener(e -> markAsDone());
         deleteButton.addActionListener(e -> deleteTask());
         sortButton.addActionListener(e -> sortTasks());
-
         frame.setVisible(true);
     }
-
     private void addTask() {
         String title = taskField.getText().trim();
         String dateStr = dateField.getText().trim();
@@ -79,7 +77,6 @@ public class ToDo {
             showMessage("Invalid date format.");
         }
     }
-
     private void updateTaskList() {
         taskListModel.clear();
         for (Task task : tasks) {
@@ -94,7 +91,6 @@ public class ToDo {
             updateTaskList();
         }
     }
-
     private void deleteTask() {
         int index = taskList.getSelectedIndex();
         if (index >= 0) {
@@ -102,7 +98,6 @@ public class ToDo {
             updateTaskList();
         }
     }
-
     private void sortTasks() {
         tasks.sort(Comparator.comparing(Task::getDueDate));
         updateTaskList();
